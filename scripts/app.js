@@ -3,9 +3,10 @@ const new_name = document.querySelector('.new-name');
 const new_chat = document.querySelector('.new-chat');
 const room_acc = document.querySelector('.chat-rooms');
 
+const user = localStorage.username ? localStorage.username : 'Dev';
 
 const chat = new chatUI(list);
-const chatroom = new Chatroom('general','Neel');
+const chatroom = new Chatroom('general', user);
 
 chatroom.getChats( data => chat.render(data));
 
