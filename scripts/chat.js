@@ -36,6 +36,7 @@ class Chatroom{
         }
     }
     updateUsername(username){
+        localStorage.setItem('username',username);
         this.username = username;
     }
 }
